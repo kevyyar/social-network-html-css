@@ -1,0 +1,291 @@
+/* ------------- VARIABLES */
+:root {
+  --primary-color: #fff;
+  --secondary-color: #e0e0e0;
+  --facebook-color: #2196f3;
+}
+
+/* -------------------------------------- RESETS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* --------------------------------------- HEADER */
+
+header {
+  background-color: #3b5998;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.logo {
+  font-size: 2.2rem;
+  margin-right: 50px;
+}
+
+.profile-settings {
+  font-size: 1.2rem;
+}
+
+.profile-settings span {
+  margin-right: 20px;
+}
+
+.profile-settings span:last-child,
+.notifications a:nth-child(3) {
+  border-right: 2px solid #e0e0e05b;
+  padding-right: 120px;
+}
+
+.notifications a:nth-child(4) {
+  margin-left: 25px;
+}
+
+.notifications {
+  font-size: 1.2rem;
+}
+
+.notifications a {
+  margin-right: 10px;
+}
+
+.right-container span {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.right-container input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #e0e0e05b;
+  font-size: 1.2rem;
+  outline: none;
+  color: #e0e0e0;
+}
+
+/* -------------------------------- SHOWCASE */
+#showcase {
+  height: 92vh;
+  background-image: url("https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding-top: 400px;
+  padding-left: 80px;
+}
+
+.profile-info img {
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.profile-actions h1 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.profile-actions button {
+  margin-right: 15px;
+  /* background: rgba(255, 255, 255, 0.6); */
+  background-color: #babbe4;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* -------------------------------- NEWSFEED */
+#newsfeed {
+  background: #e9ecf5;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 30px;
+  padding: 30px 50px;
+}
+
+.newsfeed-left {
+  padding: 15px;
+}
+
+.newsfeed-left .intro-container,
+.newsfeed-left .photos-container,
+.newsfeed-left .friends-container {
+  background-color: var(--primary-color);
+  padding: 25px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 6px 7px 15px -3px rgba(0, 0, 0, 0.84);
+  -webkit-box-shadow: 6px 7px 15px -3px rgba(0, 0, 0, 0.84);
+  -moz-box-shadow: 6px 7px 15px -3px rgba(0, 0, 0, 0.84);
+}
+
+.newsfeed-left .photos-grid,
+.newsfeed-left .friends-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.newsfeed-left .photos-grid .photo-container img {
+  width: 100%;
+}
+
+.intro-title,
+.photos-title,
+.friends-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.intro-title i,
+.photos-title i,
+.friends-title i {
+  font-size: 25px;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.intro-title span,
+.photos-title span,
+.friends-title span {
+  font-size: 20px;
+}
+
+.intro-occupation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.intro-address {
+  color: grey;
+  margin-bottom: 15px;
+}
+
+.intro-address span:last-of-type {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.intro-button button {
+  background-color: var(--facebook-color);
+  color: var(--secondary-color);
+}
+
+.newsfeed-icons {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 45px;
+  border-radius: 10px;
+}
+
+.newsfeed-icons i {
+  font-size: 25px;
+  color: var(--facebook-color);
+  margin-bottom: 15px;
+}
+
+.newsfeed-icons span {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: grey;
+}
+
+.newsfeed-icons {
+  position: absolute;
+  top: 870px;
+  width: 65%;
+}
+
+.timeline,
+.about,
+.friends,
+.photos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.newsfeed-post {
+  background-color: var(--primary-color);
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 6px 7px 15px -3px rgba(0, 0, 0, 0.84);
+  -webkit-box-shadow: 6px 7px 15px -3px rgba(0, 0, 0, 0.84);
+  -moz-box-shadow: 6px 7px 15px -3px rgba(0, 0, 0, 0.84);
+}
+
+.newsfeed-post .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.newsfeed-post .user-info img {
+  width: 5%;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.newsfeed-post .user-info .user-details span {
+  display: block;
+}
+
+.newsfeed-post .user-info .user-details span > a {
+  color: var(--facebook-color);
+}
+
+.newsfeed-post .user-info .user-details span:last-child {
+  margin-top: 5px;
+  color: grey;
+}
